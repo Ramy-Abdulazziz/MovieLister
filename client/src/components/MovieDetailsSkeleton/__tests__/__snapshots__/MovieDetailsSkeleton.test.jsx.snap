@@ -1,0 +1,71 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MovieDetailsSkeleton > should render the skeleton structure correctly 1`] = `
+<div
+  class="skeleton-details-container"
+>
+  <div
+    class="skeleton-backdrop"
+  />
+  <div
+    class="skeleton-content"
+  >
+    <div
+      class="skeleton-actions"
+    >
+      <div
+        class="skeleton-back-link"
+      />
+    </div>
+    <div
+      class="skeleton-header"
+    >
+      <div
+        class="skeleton-title"
+      />
+      <div
+        class="skeleton-tagline"
+      />
+      <div
+        class="skeleton-meta"
+      />
+    </div>
+    <div
+      class="skeleton-body"
+    >
+      <div
+        class="skeleton-poster"
+      />
+      <div
+        class="skeleton-overview-section"
+      >
+        <div
+          class="skeleton-overview-title"
+        />
+        <div
+          class="skeleton-overview-text"
+        />
+        <div
+          class="skeleton-overview-text"
+        />
+        <div
+          class="skeleton-overview-text short"
+        />
+      </div>
+    </div>
+    <div
+      class="skeleton-genres"
+    >
+      <div
+        class="skeleton-genre-tag"
+      />
+      <div
+        class="skeleton-genre-tag"
+      />
+      <div
+        class="skeleton-genre-tag"
+      />
+    </div>
+  </div>
+</div>
+`;
