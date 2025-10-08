@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import { ThemeProvider } from "./components/Theme/ThemeProvider";
 import { FavoritesProvider } from "./components/Favorites/FavoritesProvider";
 import Home from "./pages/Home/Home";
+import MovieDetail from "./pages/MovieDetail/MovieDetail";
 
 function App() {
     return (
@@ -15,6 +16,10 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Landing />} />
                             <Route path="/home" element={<Home />} />
+                            <Route
+                                path="/movie/:movieId"
+                                element={<MovieDetail />}
+                            />
                         </Routes>
                     </FavoritesProvider>
                 </ThemeProvider>
