@@ -1,0 +1,98 @@
+@import "/src/styles/themes.css";
+
+.movie-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.favorite-button:hover {
+    background-color: rgba(220, 53, 69, 0.8);
+}
+
+.favorite-button svg {
+    color: white;
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.favorite-button.favorited svg {
+    fill: #dc3545;
+    stroke: #dc3545;
+    transform: scale(1.1);
+}
+
+.movie-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    color: white;
+    padding: 40px 16px 16px;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.movie-card:hover .movie-info-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.movie-title {
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.movie-rating {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .movie-card:hover {
+        transform: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .movie-info-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.8) 50%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        padding: 20px 12px 12px;
+    }
+
+    .movie-title {
+        font-size: 1rem;
+    }
+
+    .movie-rating {
+        font-size: 0.8rem;
+    }
+}
