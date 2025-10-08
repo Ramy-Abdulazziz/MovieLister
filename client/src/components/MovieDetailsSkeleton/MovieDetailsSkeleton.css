@@ -24,7 +24,7 @@
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
-    top: -3000px;
+    top: -200px;
 }
 
 .skeleton-title,
@@ -126,7 +126,7 @@
 
 @media (max-width: 768px) {
     .skeleton-content {
-        top: -100px;
+        top: -350px;
     }
 
     .skeleton-header {
