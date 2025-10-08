@@ -5,6 +5,7 @@ import { ThemeProvider } from "./components/Theme/ThemeProvider";
 import { FavoritesProvider } from "./components/Favorites/FavoritesProvider";
 import Home from "./pages/Home/Home";
 import MovieDetail from "./pages/MovieDetail/MovieDetail";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                                 path="/movie/:movieId"
                                 element={<MovieDetail />}
                             />
+                            <Route path="*" element={<NotFound />} />
                         </Routes>
                     </FavoritesProvider>
                 </ThemeProvider>
