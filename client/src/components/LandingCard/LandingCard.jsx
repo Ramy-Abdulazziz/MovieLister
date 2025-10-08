@@ -1,7 +1,9 @@
 import "./LandingCard.css";
+import { useNavigate } from "react-router";
 import { ClapperboardIcon, MoveRightIcon } from "lucide-react";
 
 const LandingCard = () => {
+    const navigate = useNavigate();
 
     return (
         <div className="welcome-card">
@@ -12,7 +14,7 @@ const LandingCard = () => {
             <h1 className="welcome-title">MovieLister</h1>
             <p className="welcome-subtitle">Your movies your way!</p>
 
-            <button className="enter-btn">
+            <button className="enter-btn" onClick={() => navigate("/home")}>
                 <span>Explore Movies</span>
                 <MoveRightIcon />
             </button>
