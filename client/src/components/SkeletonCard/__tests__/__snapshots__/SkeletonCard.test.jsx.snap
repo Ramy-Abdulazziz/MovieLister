@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SkeletonCard > should render the skeleton structure correctly and match the snapshot 1`] = `
+<div
+  class="skeleton-card"
+>
+  <div
+    class="skeleton-image"
+  />
+  <div
+    class="skeleton-text"
+  />
+</div>
+`;
