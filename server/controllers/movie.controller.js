@@ -19,6 +19,11 @@ const getMovieDetails = async (req, res, next) => {
     try {
         const { id } = req.params;
         const movieDetails = await movieService.fetchMovieDetails(id);
+
+        if (!movieDetails) {
+            // If the service returns null, we send a 404 response.
+            return res.status(404).json({ error: "Movie not found" });
+        }
         res.status(200).json(movieDetails);
     } catch (err) {
         next(err);
