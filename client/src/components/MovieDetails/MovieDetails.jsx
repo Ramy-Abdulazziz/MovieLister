@@ -29,13 +29,27 @@ const MovieDetails = ({ movie }) => {
                     <p className="tagline">{movie.tagline}</p>
 
                     <div className="details-meta">
-                        <span>{movie.release_date?.substring(0, 4)}</span>
-                        <span>•</span>
-                        <span>{movie.runtime} min</span>
-                        <span>•</span>
-                        <span className="rating">
-                            ⭐ {movie.vote_average?.toFixed(1)}
-                        </span>
+                        {movie.release_date && (
+                            <>
+                                <span>
+                                    {movie.release_date?.substring(0, 4)}
+                                </span>
+                                <span>•</span>
+                            </>
+                        )}
+
+                        {movie.runtime && (
+                            <>
+                                <span>{movie.runtime} min</span>
+                                <span>•</span>
+                            </>
+                        )}
+
+                        {movie.runtime && (
+                            <span className="rating">
+                                ⭐ {movie.vote_average?.toFixed(1)}
+                            </span>
+                        )}
                     </div>
                 </div>
                 <div className="details-body">
