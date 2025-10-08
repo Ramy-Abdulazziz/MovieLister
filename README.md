@@ -1,8 +1,12 @@
-
 # MovieLister
+
 ## Project Description
 
 MovieLister is a modern, responsive web application designed to allow users to browse trending movies, view detailed information about their selections, and manage a personal list of favorite movies. The application features a decoupled frontend and backend architecture, with a secure API layer to handle interactions with the external The Movie Database (TMDB) API.
+
+## Video Demo
+
+ [Watch the demo video](https://github.com/Ramy-Abdulazziz/MovieLister/raw/main/client/public/ramy_abdulazziz_demo_compressed.mp4)
 
 ## Tech Stack
 
@@ -19,6 +23,7 @@ Node.js, Express
 Axios (on backend), Fetch API (on frontend)
 
 ### Libraries
+
 lucide-react, react-router, cors, dotenv, vite
 
 ## Testing:
@@ -52,13 +57,14 @@ Navigate to the server directory:
 cd path/to/your/project/server
 ```
 
-Create an environment file: Create a new file named .env in the server directory. You will need to add your TMDB API Read Access Token (v4 auth).
+Create an environment file: Create a new file named .env in the server directory. You will need to add your TMDB API Read Access Token (v4 auth), Port, and BASE_URL specified for the api.
 
 ### .env
 
 ```
 TMDB_API_TOKEN="your_long_api_read_access_token_here"
 PORT=3001
+BASE_URL=http://localhost
 ```
 
 Install dependencies:
@@ -70,12 +76,13 @@ npm install
 Run the server:
 
 ```
-npm run dev
+node ./server.js
 ```
 
 The server should now be running on http://localhost:3001.
 
 ### Frontend Setup (/client)
+
 The frontend is the React application that the user interacts with.
 
 Navigate to the client directory:
@@ -84,12 +91,13 @@ Navigate to the client directory:
 cd path/to/your/project/client
 ```
 
-Create a local environment file: Create a new file named .env.local in the client root directory. This will tell your React app where to find the backend server.
+Create a local environment file: Create a new file named .env.local in the client root directory. This will tell your React app where to find the backend server. Add the VITE_API_BASE_URL, and VITE_FAVORITES_KEY entries.
 
 ### .env.local
 
 ```
 VITE_API_BASE_URL=http://localhost:3001/api
+VITE_FAVORITES_KEY = movie-favorites
 ```
 
 Install dependencies:
@@ -111,17 +119,20 @@ The React application should now be running and available at http://localhost:51
 Both the frontend and backend have their own test suites.
 
 ### Backend Tests
+
 Navigate to the /server directory.
 Run the Jest/Supertest suite:
-
 
 ```
 npm test
 ```
+
 ### Frontend Tests
+
 Navigate to the /client directory.
 
 Run the Vitest/React Testing Library unit tests:
+
 ```
 npm test
 ```
