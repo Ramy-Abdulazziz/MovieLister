@@ -19,21 +19,18 @@ describe("FavoriteButton", () => {
 
         render(<FavoriteButton movie={mockMovie} />);
 
-        // Assert: Check the initial state
         const button = screen.getByLabelText("Add to favorites");
         expect(button).toBeInTheDocument();
         expect(button).not.toHaveClass("favorited");
 
-        // Act: Simulate a user clicking the button
         await userEvent.click(button);
 
-        // Assert: Check that the correct function was called
         expect(mockAddFavorite).toHaveBeenCalledWith(123);
     });
 
     it("should render correctly and call removeFavorite when favorited", async () => {
         useFavorites.mockReturnValue({
-            favoriteIds: [123], 
+            favoriteIds: [123],
             addFavorite: mockAddFavorite,
             removeFavorite: mockRemoveFavorite,
         });
